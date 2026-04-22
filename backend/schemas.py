@@ -1,6 +1,6 @@
 from pydantic import BaseModel, Field
 from typing import Optional, List
-from datetime import datetime
+from datetime import datetime, time
 
 
 # Schemas for Company
@@ -268,7 +268,7 @@ class CheckCreate(CheckBase):
 class CheckResponse(CheckBase):
     id: int
     created_date: datetime
-    created_time: datetime
+    created_time: time
 
     class Config:
         from_attributes = True
